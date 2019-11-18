@@ -1,0 +1,3 @@
+questions = ['', '', '', '', '', '', '', '', '', '']
+
+document.getElementById('questions')
