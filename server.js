@@ -9,9 +9,5 @@ app.use(express.static(join(__dirname, 'public')))
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
-app.get('/', (req, res) =>{
-    res.render('public')
-})
-
 // port
 app.listen(3000)
