@@ -6,30 +6,30 @@ const userData = [
         'scores': [
             1,
             2,
-            3,
-            4,
-            5,
-            4,
-            3,
+            1,
             2,
             1,
-            4
+            2,
+            1,
+            2,
+            1,
+            2
         ]
     },
     {
         'Name': 'Morty',
         'photo': 'https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwiS1tDvt_rlAhXXsJ4KHRoaCNsQjRx6BAgBEAQ&url=https%3A%2F%2Fwww.ranker.com%2Flist%2Frick-and-morty-fan-theories%2Fjacob-shelton&psig=AOvVaw2lL4dq4kiThiv2nQ2gOWxa&ust=1574395879074534',
         'scores': [
-            1,
-            2,
-            3,
-            4,
+            5,
+            5,
             5,
             4,
-            3,
-            2,
-            1,
-            4
+            5,
+            5,
+            5,
+            5,
+            5,
+            5
         ]
     },
 ]
