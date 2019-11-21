@@ -1,10 +1,13 @@
-module.exports = app => {
-    // gets home page
-    app.get('/', (req, res) =>{
-        res.render('home')
-    })
+// Call to path
+const path = require('path')
 
-    app.get('/survey',(req, res) => {
-        res.sendFile(join(__dirname + '/survey'))
+module.exports = function (app) {
+    // Get homepage
+    app.get('/', function (req, res) {
+        res.sendFile(path.join(__dirname, '..', 'public', 'index.html'))
+    })
+    // Get survey page
+    app.get('/survey', function (req, res) {
+        res.sendFile(path.join(__dirname, '..', 'public', 'survey.html'))
     })
 }
