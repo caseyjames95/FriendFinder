@@ -15,12 +15,27 @@
     <div class="container">
         <div class="jumbotron">
             <h1 class="display-4">Quiz!</h1>
-            <p class="lead">Answer 10 statements with 1 - 5, 5 being "most agree". Once completed, you will be matched with
+            <p class="lead">Answer 10 statements with 1 - 5, 5 being "most agree". Once completed, you will be matched
+                with
                 a friend!</p>
             <hr class="my-4">
             <!-- All questions listed -->
             <p>
                 <div class="form-group">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroup-sizing-default">Name</span>
+                        </div>
+                        <input id="nameId" type="text" class="form-control" aria-label="Sizing example input"
+                            aria-describedby="inputGroup-sizing-default">
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroup-sizing-default">Picture Link</span>
+                        </div>
+                        <input id="pictureLink" type="text" class="form-control" aria-label="Sizing example input"
+                            aria-describedby="inputGroup-sizing-default">
+                    </div>
                     <label for="quest1">1. I am likely to stay in on a Saturday night and watch a good movie.</label>
                     <select class="form-control" id="quest1">
                         <option>1 (Strongly Disagree)</option>
@@ -140,12 +155,36 @@
                 </div>
             </p>
 
-            <a class="btn btn-primary btn-lg" href="#" role="button">Submit</a>
+            <a id="submit" class="btn btn-primary btn-lg" href="#" role="button">Submit</a>
         </div>
     </div>
+
     <script>
-        // Javascript for comparing answers
+        const friendApp = function () {
+            document.getElementById("submit").addEventListener("click", function (e) {
+                e.preventDefault()
+                let newFriend = {
+                    'name': document.getElementById('nameId').value,
+                    'photo': document.getElementById('pictureLink').value,
+                    'scores': [
+                        parseInt(document.getElementById('quest1').value),
+                        parseInt(document.getElementById('quest2').value),
+                        parseInt(document.getElementById('quest3').value),
+                        parseInt(document.getElementById('quest4').value),
+                        parseInt(document.getElementById('quest5').value),
+                        parseInt(document.getElementById('quest6').value),
+                        parseInt(document.getElementById('quest7').value),
+                        parseInt(document.getElementById('quest8').value),
+                        parseInt(document.getElementById('quest9').value),
+                        parseInt(document.getElementById('quest10').value)
+                    ]
+                }
+                console.log(newFriend)
+            }
+            )
+        }
     </script>
+
 </body>
 
 </html>

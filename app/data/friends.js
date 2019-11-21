@@ -34,5 +34,5 @@ const userData = [
     },
 ]
 
-// Exports array of userData
+// Exports data
 module.exports = userData
